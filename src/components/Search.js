@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Fooddata from './FoodData'
+import Cards from './Cards'
 // import image
 import sitelogo from '../assets/food.png'
 
@@ -21,6 +22,14 @@ const Search = () => {
         rounded-l-md focus:outline-none'  style={{width:"20rem"}}/>
         <button  className='px-8 py-[9.5px] bg-orange-400 rounded-r-md text-[1.2rem] text-white'>search</button>
       </div>
+
+      <section className=' container mt-4'>
+        <h2 className='text-2xl  pl-20' style={{fontWeight:500}}>Resturant Hyderabad is open NOW</h2>
+        <div className='grid grid-cols-3 ml-[4rem] mt-3'>
+            <Cards data={foodData} />
+        </div>
+
+      </section>
     </>
   )
 }
