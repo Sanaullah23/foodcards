@@ -3,11 +3,11 @@ import React from "react";
 const Cards = ({ data }) => {
   return (
     <>
-      {data.map((element, k) => {
+      {data.map((element, key) => {
         return (
           /// card
           <>
-            <div className="w-[22rem] border-[1px] mb-4 rounded-md" key={k}>
+            <div className="w-[22rem] border-[1px] mb-4 rounded-md hover:shadow-xl duration-200" key={key}>
               <div className="flex justify-center items-center">
                 <img
                   src={element.imgdata}
@@ -31,7 +31,7 @@ const Cards = ({ data }) => {
               </div>
               <hr />
 
-              <div className="flex justify-between items-center px-1 py-2">
+              <div className="flex justify-between items-center px-2 py-2">
                 <img src={element.arrimg} alt="" className="w-[1.3rem]" />
                 <p>{element.somedata}</p>
                 <img src={element.delimg} alt="" className="w-[2rem]" />
